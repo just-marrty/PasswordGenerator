@@ -1,12 +1,60 @@
 :root {
-    --primary-color: #1f2c30;      /* Star Wars modrá (hlavní) */
-    --secondary-color: #101017;    /* Star Wars tmavě modrá/černá (pozadí) */
-    --tertiary-color: #1e2a4a;     /* Star Wars střední modrá */
-    --quaternary-color: #ff2323;   /* Star Wars červená (akcent, border) */
-    --quinary-color: #ffd000;      /* Star Wars žlutá (text, sekundární akcent) */
-    --senary-color: #ffd000;       /* Star Wars žlutá (tlačítka, border) */
-    --septenary-color: #000000;    /* Star Wars černá (tmavé pozadí) */
-    --octonary-color: #00bfff;     /* Star Wars modrá (border) */
+    --primary-color: #1f2c30;
+    /* Star Wars modrá (hlavní) */
+    --secondary-color: #101017;
+    /* Star Wars tmavě modrá/černá (pozadí) */
+    --tertiary-color: #1e2a4a;
+    /* Star Wars střední modrá */
+    --quaternary-color: #ff2323;
+    /* Star Wars červená (akcent, border) */
+    --quinary-color: #ffd000;
+    /* Star Wars žlutá (text, sekundární akcent) */
+    --senary-color: #ffd000;
+    /* Star Wars žlutá (tlačítka, border) */
+    --septenary-color: #000000;
+    /* Star Wars černá (tmavé pozadí) */
+    --octonary-color: #00bfff;
+    /* Star Wars modrá (border) */
+}
+
+/* Material Icons Font */
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/MaterialSymbolsRounded.woff2') format('woff2');
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Montserrat Font */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+/* Orbitron Font */
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Orbitron-Regular.woff2') format('woff2');
 }
 
 * {
@@ -256,7 +304,7 @@ body {
     background: var(--octonary-color);
 }
 
-.pass-length span{
+.pass-length span {
     color: #fff;
 }
 
@@ -504,7 +552,7 @@ input[type="range"]::-moz-range-thumb {
 
 .pass-settings label.title {
     color: #fff !important;
-} 
+}
 
 /* MODAL ZÁSADY */
 .privacy-modal {
@@ -577,13 +625,13 @@ input[type="range"]::-moz-range-thumb {
 /* MEDIA QUERY MODAL*/
 @media (max-width: 600px) {
     .privacy-modal-content {
-    max-width: 90vw;
-    width: 90vw;
-    margin: 0 5vw;
-    padding: 0.8rem;
-    border-radius: 12px;
-    box-sizing: border-box;
-    max-height: 80vh;
-    overflow-y: auto;
+        max-width: 90vw;
+        width: 90vw;
+        margin: 0 5vw;
+        padding: 0.8rem;
+        border-radius: 12px;
+        box-sizing: border-box;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 }

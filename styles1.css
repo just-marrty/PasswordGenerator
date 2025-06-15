@@ -1,12 +1,60 @@
 :root {
-    --primary-color: #ffe600; /* Cyberpunk yellow */
-    --secondary-color: #222222; /* Cyberpunk dark gray */
-    --tertiary-color: #000000; /* Cyberpunk black */
-    --quaternary-color: #00fff7; /* Cyberpunk neon blue */
-    --quinary-color: #ff00c8; /* Cyberpunk neon pink */
-    --senary-color: #ffe600; /* Cyberpunk yellow for text */
-    --septenary-color: #111111; /* Even darker bg */
-    --octonary-color: #00fff7; /* Border color neon blue */
+    --primary-color: #ffe600;
+    /* Cyberpunk yellow */
+    --secondary-color: #222222;
+    /* Cyberpunk dark gray */
+    --tertiary-color: #000000;
+    /* Cyberpunk black */
+    --quaternary-color: #00fff7;
+    /* Cyberpunk neon blue */
+    --quinary-color: #ff00c8;
+    /* Cyberpunk neon pink */
+    --senary-color: #ffe600;
+    /* Cyberpunk yellow for text */
+    --septenary-color: #111111;
+    /* Even darker bg */
+    --octonary-color: #00fff7;
+    /* Border color neon blue */
+}
+
+/* Material Icons Font */
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/MaterialSymbolsRounded.woff2') format('woff2');
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Montserrat Font */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+/* Orbitron Font */
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Orbitron-Regular.woff2') format('woff2');
 }
 
 * {
@@ -481,7 +529,7 @@ input[type="range"]::-moz-range-thumb {
     .input-icon:not(.toggle-password-visibility) {
         right: 8px;
     }
-} 
+}
 
 /* MODAL ZÁSADY */
 .privacy-modal {
@@ -554,13 +602,13 @@ input[type="range"]::-moz-range-thumb {
 /* MEDIA QUERY MODAL*/
 @media (max-width: 600px) {
     .privacy-modal-content {
-    max-width: 90vw;
-    width: 90vw;
-    margin: 0 5vw;
-    padding: 0.8rem;
-    border-radius: 12px;
-    box-sizing: border-box;
-    max-height: 80vh;
-    overflow-y: auto;
+        max-width: 90vw;
+        width: 90vw;
+        margin: 0 5vw;
+        padding: 0.8rem;
+        border-radius: 12px;
+        box-sizing: border-box;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 }

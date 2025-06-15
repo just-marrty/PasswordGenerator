@@ -1,27 +1,68 @@
+/* Base Styles */
 :root {
-    --primary-color: #5b9736;
-    /* Minecraft grass green */
-    --secondary-color: #8b5a2b;
-    /* Minecraft dirt brown */
+    --primary-color: #36a420;
+    --secondary-color: #61472d;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --border-color: #dcdde1;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: 'Montserrat', sans-serif;
+    --font-family-heading: 'Orbitron', sans-serif;
     --tertiary-color: #3b3b3b;
-    /* Dark stone */
     --quaternary-color: #5b9736;
-    /* Lighter stone */
     --quinary-color: #cac7c7;
-    /* White for text */
     --senary-color: #ffaa00;
-    /* Minecraft gold */
     --septenary-color: #2b2b2b;
-    /* Dark background */
     --octonary-color: #666666;
-    /* Border color */
+}
+
+/* Material Icons Font */
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/MaterialSymbolsRounded.woff2') format('woff2');
+}
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Montserrat Font */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Montserrat-Regular.woff2') format('woff2');
+}
+
+/* Orbitron Font */
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Orbitron-Regular.woff2') format('woff2');
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Orbitron", "Montserrat", sans-serif;
     color: var(--senary-color);
 }
 
@@ -561,13 +602,13 @@ input[type="range"]::-moz-range-thumb {
 /* MEDIA QUERY MODAL*/
 @media (max-width: 600px) {
     .privacy-modal-content {
-    max-width: 90vw;
-    width: 90vw;
-    margin: 0 5vw;
-    padding: 0.8rem;
-    border-radius: 12px;
-    box-sizing: border-box;
-    max-height: 80vh;
-    overflow-y: auto;
+        max-width: 90vw;
+        width: 90vw;
+        margin: 0 5vw;
+        padding: 0.8rem;
+        border-radius: 12px;
+        box-sizing: border-box;
+        max-height: 80vh;
+        overflow-y: auto;
     }
 }
