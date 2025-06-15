@@ -37,11 +37,3 @@
     font-weight: 400;
     src: url('fonts/Orbitron-Regular.woff2') format('woff2');
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Orbitron", "Montserrat", sans-serif;
-    color: var(--senary-color);
-}
