@@ -1,0 +1,589 @@
+:root {
+    --primary-color: #1f2c30;      /* Star Wars modrá (hlavní) */
+    --secondary-color: #101017;    /* Star Wars tmavě modrá/černá (pozadí) */
+    --tertiary-color: #1e2a4a;     /* Star Wars střední modrá */
+    --quaternary-color: #ff2323;   /* Star Wars červená (akcent, border) */
+    --quinary-color: #ffd000;      /* Star Wars žlutá (text, sekundární akcent) */
+    --senary-color: #ffd000;       /* Star Wars žlutá (tlačítka, border) */
+    --septenary-color: #000000;    /* Star Wars černá (tmavé pozadí) */
+    --octonary-color: #00bfff;     /* Star Wars modrá (border) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    color: var(--senary-color);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--secondary-color);
+}
+
+.minecraft-navbar {
+    background: var(--septenary-color);
+    border-bottom: 4px solid var(--octonary-color);
+    box-shadow: 0 2px 16px 0 var(--octonary-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+}
+
+.navbar-logo {
+    height: 38px;
+    display: block;
+    margin: 0;
+    filter: drop-shadow(0 0 8px var(--senary-color));
+}
+
+.theme-switcher-btn {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-switcher-icon {
+    height: 38px;
+    width: 38px;
+    display: block;
+    filter: drop-shadow(0 0 8px var(--senary-color));
+}
+
+.navbar-title {
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-size: 1.4rem;
+    color: var(--quinary-color);
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px var(--quinary-color);
+}
+
+.minecraft-footer {
+    background: var(--septenary-color);
+    border-top: 4px solid var(--quaternary-color);
+    box-shadow: 0 -2px 16px 0 var(--quaternary-color);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+}
+
+.minecraft-footer,
+.minecraft-footer * {
+    color: #fff !important;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    text-align: center;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-content a,
+.footer-content a:visited {
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: color 0.2s;
+}
+
+.footer-content a:hover {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: var(--quaternary-color);
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.input-icon:hover {
+    color: var(--primary-color);
+}
+
+.input-icon.toggle-password-visibility {
+    right: 36px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.input-icon:not(.toggle-password-visibility) {
+    right: 8px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    background: var(--septenary-color);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px var(--octonary-color);
+    border: 3px solid var(--octonary-color);
+    padding: 2px;
+}
+
+.container h2 {
+    font-weight: 600;
+    font-size: 21px;
+    padding: 16px 30px;
+    border-bottom: 2px solid var(--octonary-color);
+    text-align: center;
+    color: #fff;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+}
+
+.wrapper {
+    margin: 20px 30px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 53px;
+    color: #fff;
+    background: var(--secondary-color);
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 8px;
+    letter-spacing: 1.4px;
+    border: 2px solid var(--quaternary-color);
+    padding: 0 48px 0 16px;
+    box-shadow: 0 0 8px var(--quaternary-color);
+}
+
+.input-box span {
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+    line-height: 53px;
+    color: var(--quaternary-color);
+}
+
+.input-box span:hover {
+    color: var(--quaternary-color) !important;
+}
+
+.pass-indicator {
+    width: 100%;
+    height: 8px;
+    position: relative;
+    background: var(--secondary-color);
+    margin-top: 12px;
+    border-radius: 4px;
+}
+
+.pass-indicator::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.pass-indicator#weak::before {
+    width: 20%;
+    background: #fff;
+}
+
+.pass-indicator#medium::before {
+    width: 50%;
+    background: var(--octonary-color);
+}
+
+.pass-indicator#strong::before {
+    width: 100%;
+    background: var(--quaternary-color);
+}
+
+.pass-length {
+    margin: 25px 0 20px;
+}
+
+.pass-length .details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-length input {
+    width: 100%;
+    height: 5px;
+    background: var(--octonary-color);
+}
+
+.pass-length span{
+    color: #fff;
+}
+
+.pass-length label {
+    color: #fff;
+}
+
+.pass-settings .options {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.pass-settings .options label {
+    color: #fff !important;
+}
+
+.pass-settings .options .option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.options .option:first-child {
+    pointer-events: none;
+}
+
+.options .option:first-child input {
+    opacity: 0.7;
+}
+
+.options .option input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    accent-color: var(--octonary-color);
+    filter: brightness(1.2);
+}
+
+.options .option input[type="checkbox"]:not(:checked) {
+    filter: grayscale(1) brightness(0.7);
+}
+
+.options .option label {
+    cursor: pointer;
+    color: #fff;
+    padding-left: 16px;
+}
+
+.generate-btn {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--quaternary-color);
+    font-size: 17px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin: 15px 0 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 8px var(--quaternary-color);
+    box-shadow: 0 0 16px var(--quaternary-color);
+}
+
+.generate-btn:hover {
+    background: var(--octonary-color);
+    color: #fff;
+    box-shadow: 0 0 16px var(--octonary-color);
+}
+
+.generate-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+a {
+    color: var(--quaternary-color) !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--quinary-color) !important;
+    text-decoration: underline;
+}
+
+*:focus {
+    outline-offset: 2px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    accent-color: var(--quaternary-color);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--quaternary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--quaternary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width: 700px) {
+    .container {
+        padding: 18px 16px;
+        margin: 22px auto 16px auto;
+    }
+
+    .wrapper {
+        margin: 14px 0;
+    }
+
+    .container h2 {
+        padding: 12px 0 14px 0;
+    }
+
+    .pass-length {
+        margin: 18px 0 14px;
+    }
+
+    .generate-btn {
+        margin: 14px 0 18px;
+        padding: 15px 0;
+    }
+
+    .navbar-logo {
+        height: 35px;
+        margin: 15px 0 12px 15px;
+    }
+
+    .theme-switcher-icon {
+        height: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px 4vw;
+        margin: 10px auto 7px auto;
+    }
+
+    .wrapper {
+        margin: 6px 0;
+    }
+
+    .container h2 {
+        padding: 9px 0 10px 0;
+    }
+
+    .pass-length {
+        margin: 12px 0 8px;
+    }
+
+    .generate-btn {
+        margin: 9px 0 12px;
+        padding: 10px 0;
+    }
+
+    .navbar-logo {
+        height: 20px;
+        margin: 10px 0 5px -7px;
+    }
+
+    .theme-switcher-icon {
+        height: 32px;
+    }
+
+    .minecraft-footer a,
+    .minecraft-footer a:visited,
+    .footer-content a,
+    .footer-content a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: color 0.2s;
+    }
+
+    .minecraft-footer a:hover,
+    .minecraft-footer a:active,
+    .minecraft-footer a:focus {
+        color: #fff;
+        text-decoration: none !important;
+    }
+
+    .toggle-password-visibility {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+        color: var(--quaternary-color);
+        cursor: pointer;
+        transition: color 0.2s;
+        z-index: 2;
+    }
+
+    .toggle-password-visibility:hover {
+        color: var(--primary-color);
+    }
+
+    .input-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+        color: var(--quaternary-color);
+        cursor: pointer;
+        transition: color 0.2s;
+        z-index: 2;
+    }
+
+    .input-icon:hover {
+        color: var(--primary-color);
+    }
+
+    .input-icon.toggle-password-visibility {
+        right: 36px;
+    }
+
+    .input-icon:not(.toggle-password-visibility) {
+        right: 8px;
+    }
+}
+
+.pass-settings label.title {
+    color: #fff !important;
+} 
+
+/* MODAL ZÁSADY */
+.privacy-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.privacy-modal-content {
+    background: var(--tertiary-color);
+    padding: 2rem;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: left;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.privacy-modal-content h2 {
+    color: var(--senary-color);
+    margin-bottom: 1rem;
+}
+
+.privacy-modal-content h3 {
+    color: var(--senary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.privacy-modal-content ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.privacy-modal-content a {
+    color: var(--senary-color);
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.privacy-modal-content a:hover {
+    color: var(--senary-color);
+}
+
+.close-privacy-modal {
+    background: var(--senary-color);
+    color: var(--tertiary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MEDIA QUERY MODAL*/
+@media (max-width: 600px) {
+    .privacy-modal-content {
+    max-width: 90vw;
+    width: 90vw;
+    margin: 0 5vw;
+    padding: 0.8rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+    max-height: 80vh;
+    overflow-y: auto;
+    }
+}

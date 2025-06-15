@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs" >
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="./css2.css">
+  <link rel="stylesheet" href="./css3.css">
+  <link rel="stylesheet" id="main-style" href="./styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Minecraft Navbar -->
+  <nav class="minecraft-navbar">
+    <div class="navbar-content">
+      <img src="logo-minecraft.webp" alt="Password Generator logo" class="navbar-logo" id="navbar-logo">
+      <button id="theme-switcher-btn" class="theme-switcher-btn" title="Změnit styl">
+        <img src="switcher.webp" alt="Změnit styl" class="theme-switcher-icon">
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="wrapper">
+        <div class="input-box">
+          <input type="password" disabled>
+          <span class="material-symbols-rounded input-icon toggle-password-visibility">visibility</span>
+          <span class="material-symbols-rounded input-icon">copy_all</span>
+        </div>
+        <div class="pass-indicator"></div>
+        <div class="pass-length">
+          <div class="details">
+            <label class="title">Délka hesla</label>
+            <span></span>
+          </div>
+          <input type="range" min="1" max="30" value="15" step="1">
+        </div>
+        <div class="pass-settings">
+          <label class="title">Nastavení hesla</label>
+          <ul class="options">
+            <li class="option">
+              <input type="checkbox" id="lowercase" checked>
+              <label for="lowercase">Malá písmena (a-z)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="uppercase">
+              <label for="uppercase">Velká písmena (A-Z)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="numbers">
+              <label for="numbers">Čísla (0-9)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="symbols">
+              <label for="symbols">Symboly (!-$^+)</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="exc-duplicate">
+              <label for="exc-duplicate">Vyloučit duplicitní znaky</label>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="spaces">
+              <label for="spaces">Zahrnout mezery</label>
+            </li>
+          </ul>
+        </div>
+        <button class="generate-btn">Generovat heslo</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minecraft Footer -->
+  <footer class="minecraft-footer">
+    <div class="footer-content">
+        <p>Web&Apps by <a href="https://moje-webovka.cz" target="_blank">just_marrty</a></p>
+        <p>&copy; 2025 Password Generator. Všechna práva vyhrazena</p>
+        <p><a href="javascript:void(0)" class="open-privacy-modal">Zásady ochrany soukromí</a></p>
+    </div>
+  </footer>
+
+  <!-- MODAL ZÁSADY -->
+  <div id="privacy-modal" class="privacy-modal" style="display: none;">
+    <div class="privacy-modal-content">
+        <h2>Zásady ochrany osobních údajů</h2>
+        <p><strong>Platné od:</strong> 9. 6. 2025</p>
+
+        <p><strong>Provozovatel webu:</strong><br>
+        Fyzická osoba – nepodnikatel</p>
+
+        <p><strong>Název služby:</strong><br>
+        PasswordGenerator (https://tvoje-url.cz)</p>
+
+        <p><strong>Kontaktní e-mail:</strong><br>
+        justmarrty@gmail.com</p>
+
+        <h3>1. Jaké osobní údaje zpracovávám?</h3>
+        <p>Tato webová aplikace neshromažďuje ani nezpracovává žádné osobní údaje.<br>
+        Nepoužívá se žádný registrační formulář, kontaktní formulář ani ukládání dat na server.</p>
+
+        <h3>2. Proč vůbec zmiňuji zásady ochrany osobních údajů?</h3>
+        <p>Ačkoli aplikace neshromažďuje žádné údaje, o zásadách informuji z důvodu transparentnosti a souladu s nařízením GDPR.</p>
+
+        <h3>3. Cookies</h3>
+        <p>Aplikace nepoužívá žádné cookies.<br>
+        Nepoužíváme technické, analytické ani marketingové cookies.</p>
+
+        <h3>4. Třetí strany</h3>
+        <p>Aplikace nevyužívá žádné externí služby, které by zpracovávaly nebo sledovaly uživatelské chování (např. Google Analytics, Formspree, Hotjar apod.).</p>
+
+        <h3>5. Kontakt</h3>
+        <p>V případě dotazů mě můžeš kontaktovat na:<br>
+        <a href="mailto:justmarrty@gmail.com">justmarrty@gmail.com</a></p>
+        <button class="close-privacy-modal">Zavřít</button>
+    </div>
+</div>
+
+  <script  src="./script.js"></script>
+</body>
+</html>
