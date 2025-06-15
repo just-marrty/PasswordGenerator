@@ -17,6 +17,14 @@
     /* Border color neon blue */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", "Montserrat", sans-serif;
+    color: var(--senary-color);
+}
+
 html,
 body {
     height: 100%;
