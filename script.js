@@ -56,14 +56,24 @@ updateSlider();
 
 // Kopírování
 if (copyIcon) {
-  copyIcon.addEventListener("click", function () {
-    navigator.clipboard.writeText(passwordInput.value);
-    copyIcon.innerText = "check";
-    copyIcon.style.color = "var(--primary-color)";
-    setTimeout(() => {
-      copyIcon.innerText = "copy_all";
-      copyIcon.style.color = "var(--quaternary-color)";
-    }, 1500);
+  copyIcon.addEventListener("click", () => {
+    // Copy password to clipboard
+    navigator.clipboard.writeText(passwordInput.value).then(() => {
+      // Change icon to check
+      const originalSrc = copyIcon.getAttribute('src');
+      copyIcon.setAttribute('src', 'check.svg');
+      
+      // Add success animation
+      copyIcon.style.transform = 'translateY(-50%) scale(1.2)';
+      setTimeout(() => {
+        copyIcon.style.transform = 'translateY(-50%) scale(1)';
+      }, 150);
+
+      // Change back to copy icon after 1.5s
+      setTimeout(() => {
+        copyIcon.setAttribute('src', originalSrc);
+      }, 1500);
+    });
   });
 }
 
@@ -78,23 +88,17 @@ document.querySelectorAll('.minecraft-footer a').forEach(link => {
 });
 
 // Toggle password visibility
-const toggleBtn = document.querySelector('.toggle-password-visibility');
-if (toggleBtn && passwordInput) {
-  toggleBtn.addEventListener('click', function () {
-    if (passwordInput.type === 'password') {
-      passwordInput.type = 'text';
-      toggleBtn.textContent = 'visibility_off';
-    } else {
-      passwordInput.type = 'password';
-      toggleBtn.textContent = 'visibility';
-    }
-  });
-  // Když se změní hodnota inputu, skryj heslo
-  passwordInput.addEventListener('input', function () {
-    passwordInput.type = 'password';
-    toggleBtn.textContent = 'visibility';
-  });
-}
+const togglePasswordVisibility = document.querySelector('.toggle-password-visibility');
+
+togglePasswordVisibility.addEventListener('click', () => {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    
+    // Toggle icon
+    const currentSrc = togglePasswordVisibility.getAttribute('src');
+    const newSrc = currentSrc.includes('visibility.svg') ? 'visibility_off.svg' : 'visibility.svg';
+    togglePasswordVisibility.setAttribute('src', newSrc);
+});
 
 // Theme switching functionality
 document.addEventListener('DOMContentLoaded', function () {
